@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/assets/todo.js"></script>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div id="block">
+    <form class="" action="" method="post">
+      <input type="text" name="entry" placeholder="Add a new item...">
+      <input type="submit" name="entry_sent" value="Add item">
+    </form>
+    <ul>
+      <% todo.forEach(function(item){ %>
+      <li><%= item.item %></li>
+    <% }); %>
+    </ul>
+    </div>
+</body>
+</html>
