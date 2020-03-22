@@ -6,6 +6,7 @@ $(document).ready(function(){
   $('form').on('submit', function(e){
       e.preventDefault();
       var item = $('form input');
+      console.log(item.val());
       var todo = {item: item.val()};
 
       $.ajax({
