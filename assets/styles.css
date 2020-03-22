@@ -4,6 +4,9 @@ body{
   font-family:tahoma;
   color: #989898;
 }
+h1{
+  font-family:cursive;
+}
 #block{
   position: relative;
     width: 95%;
@@ -36,24 +39,35 @@ input[type="text"]
 ul{
   width:95%;
   list-style-type: none;
-  position: relative;
-  left:30%;
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 li{
   display: block;
-  margin:5px;
+  margin-left: auto;
+  margin-right:auto;
   padding:10px;
   font-family:cursive;
   font-size: 20px;
   width : 50%;
 }
+.item-text{
+  display:inline-block;
+  margin:10px 0 10px 0;
+}
+#deleteIcon{
+  float:right;
+}
+.deleteIconWrap{
+  font-size: 40px;
+  text-align: right;
+}
 li:hover
 {
   background-color: #0d1521;
   font-size:23px;
-  text-decoration:line-through;
 }
 input[type="submit"]
 {

@@ -3,8 +3,8 @@
 // for response
 $(document).ready(function(){
 
-  $('form').on('submit', function(){
-
+  $('form').on('submit', function(e){
+      e.preventDefault();
       var item = $('form input');
       var todo = {item: item.val()};
 
@@ -22,8 +22,10 @@ $(document).ready(function(){
 
   });
 
-  $('li').on('click', function(){
-      var item = $(this).text().replace(/ /g, "-");
+  
+  $('#deleteIcon').on('click', function(e){
+      var item = $('.item-text').text().replace(/ /g, "-");
+      console.log(e);
       $.ajax({
         type: 'DELETE',
         url: '/todo/' + item,
@@ -33,5 +35,18 @@ $(document).ready(function(){
         }
       });
   });
-
+ 
 });
+function handleClick(e){
+  var item = e.replace(/ /g, "-");
+
+  console.log(item);
+  $.ajax({
+    type: 'DELETE',
+    url: '/todo/' + item,
+    success: function(data){
+      //do something with the data via front-end framework
+      location.reload();
+    }
+  });
+}

@@ -1,18 +1,27 @@
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/5d44695dbc.js" crossorigin="anonymous"></script>
+
 <script src="/assets/todo.js"></script>
 <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
   <div id="block">
+    <h1>To - Do List</h1>
     <form class="" action="" method="post">
       <input type="text" name="entry" placeholder="Add a new item...">
       <input type="submit" name="entry_sent" value="Add item">
     </form>
     <ul>
-      <% todo.forEach(function(item){ %>
-      <li><%= item.item %></li>
+      <% todos.forEach(function(item){ %>
+      <li>
+        <div class="">
+        <p class="item-text"><%= item.todo %> </p>
+        <!-- adding a delete icon and passing the item value to be deleted -->
+        <a href="#" id="deleteIcon" ><span class="deleteIconWrap" onClick="handleClick('<%= item.todo %>')"><i class="far fa-trash-alt"></i></span></a>
+        </div>
+      </li>
     <% }); %>
     </ul>
     </div>
