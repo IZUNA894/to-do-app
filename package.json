@@ -16,6 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "env-cmd -f ./config/dev.env nodemon index.js"
   },
